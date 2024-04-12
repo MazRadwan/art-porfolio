@@ -1,2 +1,2 @@
 # art-porfolio
-art portfolio example websitr
+art portfolio example website
