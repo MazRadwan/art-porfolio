@@ -18,9 +18,15 @@ body {
   font-size: 40px;
 }
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   background-color: white;
   color: rgb(61, 57, 57);
   padding: 1rem 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 .header-link {
   text-decoration: none;
@@ -30,7 +36,7 @@ header {
 
 .header-link:hover {
   text-decoration: none;
-  color: gray;
+  color: #87CEEB;
 }
 
 header h1 {
@@ -56,6 +62,20 @@ nav a:hover {
 nav a:visited {
   color: #6d6d6d;
   text-decoration: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: rgb(61, 57, 57);
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #87CEEB; /* Light blue color */
+}
+
+#hero {
+  margin-top: 80px; /* Adjust based on your header height */
 }
 
 #hero img {
@@ -104,6 +124,7 @@ nav a:visited {
 #portfolio {
   padding: 2rem;
   text-align: center;
+  padding-top:80px;
 }
 
 .gallery {
@@ -340,6 +361,7 @@ footer {
   background-size: cover;
   background-position: center;
   border-radius: 5px;
+  padding-top:100px;
 }
 
 .artist-bio {
@@ -348,6 +370,7 @@ footer {
   padding-right: 20px;
   text-align: justify;
   background-color: #f2f2f2;
+  margin-top:100px;
 }
 
 .artist-bio h2 {
@@ -456,6 +479,7 @@ footer {
   padding: 20px;
   color: rgb(101, 101, 101);
   background-color: #f2f2f2;
+  padding-top: 100px;
 }
 #contact {
   text-align: justify;
@@ -572,4 +596,156 @@ button {
 #social-media-icons img {
   width: 90px;
   height: 90px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 90%;
+    padding: 0 20px;
+  }
+ 
+}
+
+@media screen and (max-width: 768px) {
+  /* Header Navigation */
+  .container {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+  }
+
+
+  
+  .container-contact-Evan {
+    padding-top: 350px;
+  }
+  header nav ul {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+  }
+
+  /* Portfolio Gallery */
+  .gallery {
+    justify-content: center;
+  }
+
+  .flip-card {
+    width: calc(50% - 10px);
+    min-width: calc(50% - 10px);
+  }
+
+  /* Artist Section */
+  .artist-section {
+    flex-direction: column;
+    padding: 20px;
+    padding-top: 100px;
+  }
+
+  .artist-bio {
+    padding: 20px;
+    margin-top: 20px;
+  }
+
+  /* CV Section */
+  #artist-cv .container {
+    flex-direction: column;
+  }
+
+  .cv-box {
+    margin: 10px 0;
+  }
+
+  /* Collectors Section */
+  .collector-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* Contact Section */
+  .container-contact,
+  .container-contact-Evan {
+    grid-template-columns: 1fr;
+    gap: 2em;
+    padding: 20px;
+   
+  }
+
+  /* Testimonials */
+  #testimonials {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .testimonial {
+    width: 80%;
+    margin: 10px 0;
+  }
+
+  .support-logos {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 20px 0;
+  }
+
+  .support-logos img {
+    max-width: 200px;
+    height: auto;
+  }
+
+  #hero {
+    margin-top: 100px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* Portfolio Gallery */
+  .flip-card {
+    width: 100%;
+    min-width: 100%;
+    padding-top: 150px;
+  }
+  .portfolio {
+    padding-top: 250px;
+  }
+  /* Support Logos */
+  .support-logos {
+    gap: 20px;
+    padding: 15px 0;
+  }
+
+  .support-logos img {
+    max-width: 150px;
+  }
+
+
+
+  /* Support Logos */
+  .support-logos {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Footer */
+  .footer-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+  @media screen and (max-width: 768px) {
+  #support {
+    padding: 30px 15px;
+  }
+  
+  #support h2 {
+    font-size: 1.3rem;
+  }
+}
+.container-contact-Evan {
+  padding-top: 250px;
+}
+.artist-bio{
+  margin-top: 20px;
+}
 }
